@@ -15,6 +15,7 @@ RUN apk --no-cache --update add \
     cd /tmp/redis && \
     make && \
     make install && \
+    cp /tmp/redis/src/redis-trib.rb /usr/local/bin && \
     rm -rf /tmp/* && \
     apk del \
         autoconf \
